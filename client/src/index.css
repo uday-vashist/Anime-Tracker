@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap');
+
+:root {
+  /* Deep Dark Cyberpunk Theme Colors */
+  --bg-color: #09090b; /* Zinc 950 */
+  --text-color: #f8fafc; /* Slate 50 */
+  --card-bg: #18181b; /* Zinc 900 */
+  --primary-color: #8b5cf6; /* Vibrant Violet */
+  --primary-hover: #7c3aed;
+  --secondary-color: #06b6d4; /* Neon Cyan */
+  --accent-color: #d946ef; /* Fuchsia */
+  --success-color: #10b981;
+  --danger-color: #ef4444;
+  --border-color: #27272a; /* Zinc 800 */
+  --nav-bg: rgba(9, 9, 11, 0.85);
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+/* Make both themes dark so it's always dark, but keeping class for compatibility */
+.dark {
+  --bg-color: #09090b;
+  --text-color: #f8fafc;
+  --card-bg: #18181b;
+  --nav-bg: rgba(9, 9, 11, 0.85);
+  --border-color: #27272a;
+  --glass-border: rgba(255, 255, 255, 0.08);
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Outfit', sans-serif;
+  margin-top: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Glassmorphism utility */
+.glass {
+  background: var(--card-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.5);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+  border-radius: 4px;
+}
